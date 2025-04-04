@@ -189,7 +189,7 @@ export default function HomePage() {
 				))}
 			</Container>
 
-			<div
+			{/* <div
 				className="text-center text-white py-5"
 				style={{ backgroundColor: '#80CBC4' }}>
 				<div className="mt-3">
@@ -197,7 +197,7 @@ export default function HomePage() {
 						<Button variant="dark">Leave a Review</Button>
 					</Link>
 				</div>
-			</div>
+			</div> */}
 
 			<BookingForm
 				show={showModal}
