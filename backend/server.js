@@ -4,7 +4,15 @@ import cors from 'cors';
 import pool from './db.js';
 
 const app = express();
-app.use(cors());
+
+// Allow requests from Vercel frontend URL
+const corsOptions = {
+	origin: 'https://court-booking-app-omega.vercel.app',
+	methods: ['GET', 'POST', 'PUT', 'DELETE'],
+	allowedHeaders: ['Content-Type'],
+};
+
+app.use(cors(corsOptions));
 app.use(express.json());
 
 // Register a user
