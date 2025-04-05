@@ -47,16 +47,19 @@ export default function AuthPage() {
 				displayName: registerData.name,
 			});
 
-			await fetch('http://localhost:5000/register', {
-				method: 'POST',
-				headers: { 'Content-Type': 'application/json' },
-				body: JSON.stringify({
-					uid: user.uid,
-					name: registerData.name,
-					email: registerData.email,
-					phone: registerData.phone,
-				}),
-			});
+			await fetch(
+				'https://18de6832-baec-46d2-8a8a-8accf3a8f1b9-00-2xhtzwbqapqog.pike.replit.dev/register',
+				{
+					method: 'POST',
+					headers: { 'Content-Type': 'application/json' },
+					body: JSON.stringify({
+						uid: user.uid,
+						name: registerData.name,
+						email: registerData.email,
+						phone: registerData.phone,
+					}),
+				}
+			);
 
 			await setDoc(doc(db, 'users', user.uid), {
 				name: registerData.name,

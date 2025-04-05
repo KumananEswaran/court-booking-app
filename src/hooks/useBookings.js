@@ -96,7 +96,7 @@ export default function useBookings(user) {
 		try {
 			setLoading(true);
 			const response = await fetch(
-				`http://localhost:5000/bookings/${bookingId}`,
+				`https://18de6832-baec-46d2-8a8a-8accf3a8f1b9-00-2xhtzwbqapqog.pike.replit.dev/${bookingId}`,
 				{
 					method: 'PUT',
 					headers: { 'Content-Type': 'application/json' },
@@ -127,7 +127,7 @@ export default function useBookings(user) {
 		try {
 			setLoading(true);
 			const response = await fetch(
-				`http://localhost:5000/bookings/${bookingId}`,
+				`https://18de6832-baec-46d2-8a8a-8accf3a8f1b9-00-2xhtzwbqapqog.pike.replit.dev/${bookingId}`,
 				{
 					method: 'DELETE',
 				}
