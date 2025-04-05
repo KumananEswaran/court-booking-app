@@ -11,7 +11,9 @@ export default function useBookings(user) {
 	const fetchBookings = async () => {
 		try {
 			setLoading(true);
-			const response = await fetch('http://localhost:5000/bookings');
+			const response = await fetch(
+				'https://18de6832-baec-46d2-8a8a-8accf3a8f1b9-00-2xhtzwbqapqog.pike.replit.dev/bookings'
+			);
 			const data = await response.json();
 
 			setBookings(data);
@@ -66,14 +68,17 @@ export default function useBookings(user) {
 	const createBooking = async (bookingData) => {
 		try {
 			setLoading(true);
-			const response = await fetch('http://localhost:5000/bookings', {
-				method: 'POST',
-				headers: { 'Content-Type': 'application/json' },
-				body: JSON.stringify({
-					uid: user.uid,
-					...bookingData,
-				}),
-			});
+			const response = await fetch(
+				'https://18de6832-baec-46d2-8a8a-8accf3a8f1b9-00-2xhtzwbqapqog.pike.replit.dev/bookings',
+				{
+					method: 'POST',
+					headers: { 'Content-Type': 'application/json' },
+					body: JSON.stringify({
+						uid: user.uid,
+						...bookingData,
+					}),
+				}
+			);
 
 			const data = await response.json();
 
