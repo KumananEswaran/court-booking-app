@@ -12,7 +12,7 @@ export default function useBookings(user) {
 		try {
 			setLoading(true);
 			const response = await fetch(
-				'court-booking-app-production.up.railway.app/bookings'
+				'https://court-booking-app-production.up.railway.app/bookings'
 			);
 			const data = await response.json();
 
@@ -69,7 +69,7 @@ export default function useBookings(user) {
 		try {
 			setLoading(true);
 			const response = await fetch(
-				'court-booking-app-production.up.railway.app/bookings',
+				'https://court-booking-app-production.up.railway.app/bookings',
 				{
 					method: 'POST',
 					headers: { 'Content-Type': 'application/json' },
@@ -101,7 +101,7 @@ export default function useBookings(user) {
 		try {
 			setLoading(true);
 			const response = await fetch(
-				`court-booking-app-production.up.railway.app/${bookingId}`,
+				`https://court-booking-app-production.up.railway.app/bookings/${bookingId}`,
 				{
 					method: 'PUT',
 					headers: { 'Content-Type': 'application/json' },
@@ -132,7 +132,7 @@ export default function useBookings(user) {
 		try {
 			setLoading(true);
 			const response = await fetch(
-				`court-booking-app-production.up.railway.app/${bookingId}`,
+				`https://court-booking-app-production.up.railway.app/bookings/${bookingId}`,
 				{
 					method: 'DELETE',
 				}
