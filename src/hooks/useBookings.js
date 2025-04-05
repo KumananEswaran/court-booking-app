@@ -12,7 +12,7 @@ export default function useBookings(user) {
 		try {
 			setLoading(true);
 			const response = await fetch(
-				'https://18de6832-baec-46d2-8a8a-8accf3a8f1b9-00-2xhtzwbqapqog.pike.replit.dev/bookings'
+				'court-booking-app-production.up.railway.app/bookings'
 			);
 			const data = await response.json();
 
@@ -69,7 +69,7 @@ export default function useBookings(user) {
 		try {
 			setLoading(true);
 			const response = await fetch(
-				'https://18de6832-baec-46d2-8a8a-8accf3a8f1b9-00-2xhtzwbqapqog.pike.replit.dev/bookings',
+				'court-booking-app-production.up.railway.app/bookings',
 				{
 					method: 'POST',
 					headers: { 'Content-Type': 'application/json' },
@@ -101,7 +101,7 @@ export default function useBookings(user) {
 		try {
 			setLoading(true);
 			const response = await fetch(
-				`https://18de6832-baec-46d2-8a8a-8accf3a8f1b9-00-2xhtzwbqapqog.pike.replit.dev/${bookingId}`,
+				`court-booking-app-production.up.railway.app/${bookingId}`,
 				{
 					method: 'PUT',
 					headers: { 'Content-Type': 'application/json' },
@@ -132,7 +132,7 @@ export default function useBookings(user) {
 		try {
 			setLoading(true);
 			const response = await fetch(
-				`https://18de6832-baec-46d2-8a8a-8accf3a8f1b9-00-2xhtzwbqapqog.pike.replit.dev/${bookingId}`,
+				`court-booking-app-production.up.railway.app/${bookingId}`,
 				{
 					method: 'DELETE',
 				}
